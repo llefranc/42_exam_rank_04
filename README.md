@@ -4,6 +4,14 @@
 
 Third exam of the new 42 cursus. You will have to recode a small shell (cd, execve and pipes).
 
+You can test your own microshell with the tests inside some_tests file and compare your results with bash.
+
+It's really important to protect your syscalls with the fatal function (especially syscalls implicating file descriptors like dup, pipe... They will test your microshell with wrong fds).
+
+Check also if you're not leaking file descriptors with lsof -c microshell (put an infinite loop at the end of your main when testing this). You should have only stdin, stdout and stderr open (respectively 1u, 2u and 3u).
+
+Tests /bin/cat "|" /bin/ls and /bin/cat /dev/urandom "|" /usr/bin/head -c 10 should work like in bash. Looks SIGPIPE signal for more information.
+
 - Here is the [subject][1]
 
 `This project was code for MACOS`
