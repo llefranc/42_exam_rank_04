@@ -31,7 +31,7 @@ Checks also if you're not leaking file descriptors with `lsof -c microshell` (pu
 end of your main when testing this). You should have only stdin, stdout and stderr open (respectively 1u, 2u
 and 3u).
 
-Tests `/bin/cat "|" /bin/ls` and `/bin/cat /dev/urandom "|" /usr/bin/head -c 10` should work likein bash.
+Tests `/bin/cat "|" /bin/ls` and `/bin/cat /dev/urandom "|" /usr/bin/head -c 10` should work like in bash.
 Looks SIGPIPE signal for more information.
     
 ## Sources
