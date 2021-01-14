@@ -30,6 +30,7 @@ file descriptors like dup, pipe... They will test your microshell with wrong fds
 Checks also if you're not leaking file descriptors with `lsof -c microshell` (put an infinite loop at the
 end of your main when testing this). You should have only stdin, stdout and stderr open (respectively 1u, 2u
 and 3u).
+
 Tests `/bin/cat "|" /bin/ls` and `/bin/cat /dev/urandom "|" /usr/bin/head -c 10` should work likein bash.
 Looks SIGPIPE signal for more information.
     
