@@ -6,7 +6,7 @@
 #    By: llefranc <llefranc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/04 11:24:58 by llefranc          #+#    #+#              #
-#    Updated: 2021/01/14 11:42:33 by llefranc         ###   ########.fr        #
+#    Updated: 2021/01/14 13:11:03 by llefranc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ FLAGS		=	-Wall -Wextra -Werror
 
 SRCS		=	microshell.c 
 
-OBJS		=	$(SRCS:.cpp=.o)
+OBJS		=	$(SRCS:.c=.o)
 
 all		: 	$(NAME)
 
