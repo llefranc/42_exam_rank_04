@@ -13,7 +13,7 @@ Check also if you're not leaking file descriptors with lsof -c microshell (put a
 of your main when testing this). You should have only stdin, stdout and stderr open (respectively 1u, 2u and 3u).
 
 Tests /bin/cat "|" /bin/ls and /bin/cat /dev/urandom "|" /usr/bin/head -c 10 should work like in bash. 
-Looks SIGPIPE signal for more information.
+Look SIGPIPE signal for more information.
 
 - Here is the [subject][1]
 
