@@ -6,7 +6,7 @@
 /*   By: llefranc <llefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 11:35:56 by llefranc          #+#    #+#             */
-/*   Updated: 2021/01/14 12:09:17 by llefranc         ###   ########.fr       */
+/*   Updated: 2021/01/14 12:16:16 by llefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -173,8 +173,8 @@ int execute(char **cmd, char **env)
 		// Parent is just saving fd_pipe[0] for next son execution and correctly closing pipes
 		else
 		{
-			if (dup2(fd_pipe[0], fd_in) < 0)
-				fatal(cmd);
+			if (dup2(fd_pipe[0], fd_in) < 0)	// Really important to protect syscalls using fd,
+				fatal(cmd);						// tests with wrong fds will be done during grademe
 			close(fd_pipe[0]);
 			close(fd_pipe[1]);
 			++nb_wait;
