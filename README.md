@@ -27,7 +27,7 @@ Look SIGPIPE signal for more information.
 
 2. `cd` into the root directory then run `make`.
 
-        cd 42_exam_rank_4
+        cd 42_exam_rank_04
         make
 		
 ## Sources
