@@ -23,7 +23,7 @@ Look SIGPIPE signal for more information.
 
 1. Download/Clone this repo
 
-        git clone https://github.com/lucaslefrancq/42_exam_rank_4.git
+        git clone https://github.com/lucaslefrancq/42_exam_rank_04.git
 
 2. `cd` into the root directory then run `make`.
 
