@@ -194,9 +194,9 @@ int execute(char **cmd, char **env)
 int main(int ac, char **av, char **env)
 {
 	char **cmd = NULL;
-	int i = 1;
+	int i = 0;
 
-	while (i < ac)
+	while (++i < ac)
 	{
 		// cmd = command until next ";". i is increased of the size of cmd,
 		// av[i] will now be equal to next ";"
